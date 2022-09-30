@@ -1,0 +1,54 @@
+Project Idea 3: Student management system
+
+build a student management system with following main
+features
+
+student - create, see student, edit, delete
+teacher - create, see teacher, edit, delete
+course - create, see course, edit, delete
+exam results - create, update, see exam results
+
+should be able to enter exam result specifying student,
+course and score.
+should be able to specify teacher assigned to a course.
+application should not close until user specify a close
+command.
+all information saved to database.
+all classes and functionalities can be used from single
+School class.
+(composition or though encapsulation).
+
+
+* make a teacher
+* make a student
+* make a course
+* grades for student
+
+
+do points
+3) 4) 6) 7) 8)
+
+
+NB: All work to github
+
+
+      DONE      1. Create course
+      DONE      2. Create teacher
+      DONE      3. Create student (VÕIKS LISADA KURSUSE JA EXAMRESULT)
+            4. Enter Exam Result
+            5. Register student to course
+
+      DONE      6. View Courses
+      DONE      7. View Teachers
+      DONE      8. View Students
+
+            9. Update Course
+            10. Update Teacher (ID TO LOAD IS REQUIRED FOR LOADING)
+            11. Update Student
+
+            12. Delete Course (EI SALVESTA ANDMEID WORKBENCHI KUID
+            ÜTLEB NII ÕIGE KUI KA VALE ID KORRAL ET SUCCESSFULLY DELETED)
+            13. Delete Teacher
+            14. Delete Student
+
+            15. Exit / end program

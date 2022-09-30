@@ -1,0 +1,16 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration xmlns="http://www.hibernate.org/xsd/orm/cfg"
+>
+    <session-factory>
+        <property name="connection.username">root</property>
+        <property name="connection.password">66618</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/school?serverTimezone=UTC&amp;createDatabaseIfNotExist=true</property>
+        <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+<!--        <property name="hibernate.hbm2ddl.auto">create-drop</property>-->
+           <property name="hibernate.hbm2ddl.auto">update</property>
+    </session-factory>
+</hibernate-configuration>
