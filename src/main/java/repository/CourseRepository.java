@@ -39,26 +39,6 @@ public class CourseRepository {
         return message;
     }
 
-    public Course findCourseById(Long courseId) {
-        Course course = null;
-        try{
-            session = factory.openSession();
-            transaction = session.beginTransaction();
-            course = session.find(Course.class, courseId);
-            session.persist(course);
-            transaction.commmit();
-        }catch (Exception exception){
-            if(transaction != null){
-                transaction.rollback();
-            }
-            System.out.println(exception.getClass() + ": " + exception.getMessage());
-        }finally {
-            session.close();
-        }
-
-        return course;
-    }
-
     public ArrayList<Course> getAllCourses() {
         ArrayList<Course> courses = new ArrayList<>();
         try{
@@ -75,6 +55,26 @@ public class CourseRepository {
         }
 
         return courses;
+    }
+
+
+    public Course findCourseById(Long courseId) {
+        Course course = null;
+        try{
+            session = factory.openSession();
+            transaction = session.beginTransaction();
+            course = session.find(Course.class, courseId);
+            session.persist(course);
+        }catch (Exception exception){
+            if(transaction != null){
+                transaction.rollback();
+            }
+            System.out.println(exception.getClass() + ": " + exception.getMessage());
+        }finally {
+            session.close();
+        }
+
+        return course;
     }
 
     public Course deleteCourseById(Long courseId){

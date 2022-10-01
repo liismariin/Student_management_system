@@ -48,7 +48,7 @@ public class CourseController {
             System.out.println("Please provide valid course ID!");
             return;
         }
-        //int id = scanner.nextInt();
+        int id = scanner.nextInt();
         System.out.println("Enter the course name to replace: ");
         String replace = scanner.next();
         course.setId((long) id);
@@ -59,8 +59,6 @@ public class CourseController {
 
         System.out.println(course.getTitle() + " successfully updated");
     }
-
-    // MARGE KOOD
 
     public void deleteCourseById(){
 

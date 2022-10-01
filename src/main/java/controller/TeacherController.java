@@ -39,15 +39,6 @@ public class TeacherController {
 
     }
 
-    public void displayAllTeachers() {
-        ArrayList<Teacher> teachers = teacherRepository.getAllTeachers();
-
-        System.out.println("ID | teacher Name");
-
-        for (Teacher teacher: teachers){
-            System.out.println(teacher.getId() + " | " + teacher.getFirstName() + " " + teacher.getLastName());
-        }
-    }
 
     public void findTeacherById(){
         Teacher teacher = new Teacher();
@@ -62,6 +53,16 @@ public class TeacherController {
 
         System.out.println(teacher.getLastName() + " successfully updated");
 
+    }
+
+    public void displayAllTeachers() {
+        ArrayList<Teacher> teachers = teacherRepository.getAllTeachers();
+
+        System.out.println("ID | teacher Name");
+
+        for (Teacher teacher: teachers){
+            System.out.println(teacher.getId() + " | " + teacher.getFirstName() + " " + teacher.getLastName());
+        }
     }
 
 }

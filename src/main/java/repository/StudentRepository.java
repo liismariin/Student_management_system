@@ -77,4 +77,23 @@ public class StudentRepository {
 
         return student;
     }
+
+    public Student registerStudentToCourse(Student student) {
+        Student student = null;
+        try{
+            session = factory.openSession();
+            transaction = session.beginTransaction();
+            student = session.find(Student.class, studentId);
+        }catch (Exception exception){
+            if(transaction != null){
+                transaction.rollback();
+            }
+            System.out.println(exception.getClass() + ": " + exception.getMessage());
+        }finally {
+            session.close();
+        }
+
+        return student;
+
+    }
 }
